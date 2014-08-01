@@ -1,0 +1,33 @@
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 常量 -->
+	<!-- 是用spring创建管理struts2的action操作 -->
+	<constant name="struts.objectFactory" value="spring"/>
+
+	<package name="login" extends="json-default" namespace="/csdn">
+		<!-- class的名称等于spring中action配置文件中的 id名称  -->
+		  <action name="findAdmins" class="adminAction" method="findAdmins">
+          	<result type="json">
+				<param name="root">pagination</param>
+				<param name="excludeNullProperties">true</param>
+			</result>
+        </action>
+		  <action name="deleteAdmins" class="adminAction" method="deleteAdmins">
+          	<result type="json">
+				<param name="root">msg</param>
+			</result>
+        </action>
+		  <action name="updateAdmins" class="adminAction" method="updateAdmins">
+          	<result type="json">
+				<param name="root">msg</param>
+			</result>
+        </action>
+		  <action name="addAdmins" class="adminAction" method="addAdmins">
+          	<result type="json">
+				<param name="root">msg</param>
+			</result>
+        </action>
+	</package>
+</struts>
