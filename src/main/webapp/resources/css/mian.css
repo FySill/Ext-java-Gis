@@ -1,0 +1,9 @@
+.sidebar-nav.navbar-collapse {
+	padding-right: 5px;
+	padding-left: 0px;
+}
+
+.x-livesearch-match {
+    font-weight: bold;
+    background-color: yellow;
+}
